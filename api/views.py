@@ -1,18 +1,13 @@
-
 from rest_framework import viewsets, status
 from api.models import user, tweet
 from api.serializers import UserSerializer, tweetSerializer
-from django.contrib.auth import authenticate
-from django.views.decorators.csrf import csrf_exempt
-from rest_framework.authtoken.models import Token
-from rest_framework.decorators import api_view, permission_classes
-from rest_framework.permissions import AllowAny
+# from django.contrib.auth import authenticate
+# from django.views.decorators.csrf import csrf_exempt
+# from rest_framework.authtoken.models import Token
+# from rest_framework.decorators import api_view, permission_classes
+# from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
 from rest_framework.views import APIView
-
-
-
-
 class UserViewSet(viewsets.ModelViewSet):
     queryset = user.objects.all()
     serializer_class = UserSerializer
